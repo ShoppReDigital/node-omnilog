@@ -1,0 +1,39 @@
+{
+  "name": "@shoppre/logboard",
+  "version": "0.0.5",
+  "description": "Logboard Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoppre/node-logboard.git"
+  },
+  "keywords": [
+    "API",
+    "Logs",
+    "IP",
+    "Logs",
+    "Session",
+    "Logs",
+    "Device",
+    "Model",
+    "Logs",
+    "Geo",
+    "Location",
+    "logs"
+  ],
+  "author": "Vikas Kumar <vikas@shoppre.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shoppre/node-logboard/issues"
+  },
+  "homepage": "https://github.com/shoppre/node-logboard#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "lodash": "^4.17.15",
+    "request-promise": "^4.2.5",
+    "response-time": "^2.3.2"
+  }
+}
