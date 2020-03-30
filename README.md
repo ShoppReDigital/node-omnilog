@@ -1,15 +1,15 @@
-# LogBoard
+# OmniLog
 
 #### Installation:
  
 ```shell script
-npm i @shoppre/logboard --save
+npm i @shoppre/omnilog --save
 ```
 
 #### Usage:
 
 ```js
-const logboard = require('@shoppre/logboard');
+const omnilog = require('@shoppre/omnilog');
 
 const express = require('express'),
     bodyParser = require('body-parser'),
@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-logboard.init(app, { LOGBOARD_DSN: 'http://localhost:8800/projectname', logger: console | winstonLogger })
+omnilog.init(app, { OMNILOG_DSN: 'http://localhost:8800/projectname', logger: console | winstonLogger })
 
 ```
 
-- Server - [github.com/shoppre/logboard](https://github.com/shoppre/logboard)
+- Server - [github.com/shoppre/omnilog](https://github.com/shoppre/omnilog)
