@@ -1,14 +1,14 @@
 {
-  "name": "@shoppre/logboard",
+  "name": "@shoppredigital/omnilog",
   "version": "0.0.5",
-  "description": "Logboard Client",
+  "description": "OmniLog Client",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shoppre/node-logboard.git"
+    "url": "git+https://github.com/shoppredigital/node-omnilog.git"
   },
   "keywords": [
     "API",
@@ -27,9 +27,9 @@
   "author": "Vikas Kumar <vikas@shoppre.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shoppre/node-logboard/issues"
+    "url": "https://github.com/shoppredigital/node-omnilog/issues"
   },
-  "homepage": "https://github.com/shoppre/node-logboard#readme",
+  "homepage": "https://github.com/shoppredigital/node-omnilog#readme",
   "dependencies": {
     "debug": "^4.1.1",
     "lodash": "^4.17.15",
