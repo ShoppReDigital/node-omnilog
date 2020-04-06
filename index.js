@@ -6,30 +6,30 @@ const responseTime = require('response-time');
 const debugLog = debug('logboard/index');
 
 class LogBoard {
-    init(app, {LOGBOARD_DSN, logger}) {
-        this.LOGBOARD_DSN = LOGBOARD_DSN;
+    init(app, {OMNILOG_DSN, logger}) {
+        this.OMNILOG_DSN = OMNILOG_DSN;
         this.logger = logger || console;
-        if (!LOGBOARD_DSN) {
-            this.logger.info('monolog disabled. PLEASE UPDATE LOGBOARD_DSN in .env', {LOGBOARD_DSN});
+        if (!OMNILOG_DSN) {
+            this.logger.info('monolog disabled. PLEASE UPDATE OMNILOG_DSN in .env', {OMNILOG_DSN});
             return;
         }
 
-        if (!LOGBOARD_DSN.startsWith('http')) {
-            this.logger.info('monolog disabled. PLEASE  check LOGBOARD_DSN starts with http', {LOGBOARD_DSN});
+        if (!OMNILOG_DSN.startsWith('http')) {
+            this.logger.info('monolog disabled. PLEASE  check OMNILOG_DSN starts with http', {OMNILOG_DSN});
             return;
         }
-        const parts = LOGBOARD_DSN.trim().split('/');
+        const parts = OMNILOG_DSN.trim().split('/');
         this.project = parts.pop().trim();
 
         if (!this.project) {
-            if (!LOGBOARD_DSN.includes('http')) {
-                this.logger.info('monolog disabled. PLEASE CHECK LOGBOARD_DSN is correct in .env', {LOGBOARD_DSN});
+            if (!OMNILOG_DSN.includes('http')) {
+                this.logger.info('monolog disabled. PLEASE CHECK OMNILOG_DSN is correct in .env', {OMNILOG_DSN});
                 return;
             }
         }
 
         this.URL = parts.join('/');
-        debugLog('responseTimeLogger', LOGBOARD_DSN);
+        debugLog('responseTimeLogger', OMNILOG_DSN);
 
 
         app.use((req, res, next) => {
@@ -64,9 +64,9 @@ class LogBoard {
     }
 
     async responseTimeLogger(req, res) {
-        debugLog('fly', this, this.LOGBOARD_DSN);
+        debugLog('fly', this, this.OMNILOG_DSN);
 
-        if (!this.LOGBOARD_DSN) {
+        if (!this.OMNILOG_DSN) {
             this.logger.info('monolog disabled. PLEASE UPDATE URLS_MONOLOG in .env');
             return;
         }
